@@ -1,0 +1,26 @@
+phd,Ph.d,p.h.d,doctoral,ph.d.,ph.d,doctorate,doctor of philosophy
+doctor,doctorate
+ms,m.s.,master of science,masters of science,master's,m.b.b.s,masters,master
+bs,b.s.,bachelors of science,baccalaureate of science,baccalauréat,bachelor of science,diploma of a bachelor,b. tech.,b. tech,b tech,b.sc.,b.sc,b. science
+phm,master of philosophy
+ba,b.a,bachelors of arts,bachelor's of arts,bachelors of thearts,bachelor of arts,a.b.,ab,baccalauréat of arts,baccalauréat of arg,baccalaureates of art,baccalaureate of art,baccalaureat of art,baccalaureate of arts,B.A.,bachelor,bachelors,bachelors
+courses,non_degree,non-degree,no degree,transfer student,course,nondegree
+bfa,bachelors of fine arts
+ma,masters of arts,master of arts,master of art,masters of art,m.a.,master - joint degree
+ms,masters of science,master of science,msc,m.sc.,m.s.c,m.sc
+mse,masters of science engineering,masters of science and engineering,master of science and engineering,master of science engineering,master of engineering,masters of engineering
+mfa,masters of fine arts,master of fine arts,master fine arts,master of the fine arts
+a,associates,associate,a.a.
+aa,associate,associate of arts,associate of art
+as,associates in applied science,associates of science,associate in applied science,a.s.,associate of applied science,as degree
+degree,diploma,diploma,joint degree
+certificate,certificate,certification,passed all three chartered financial analyst (cfa),cfa,certificate of achievement,credential
+dds,d.d.s,d.ds,dental school
+fellow,scholar
+md,medical degree,medical school
+jd,j.d.,juris doctorate,doctorite of jurisprudence,law school
+mba,masters of business administration,master of business administration,m.b.a,master of management
+license,securities license
+hs,high school,highschool
+online
+trade school,trade,training school
