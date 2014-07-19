@@ -1,17 +1,60 @@
 <html>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
   <!-- Optional theme -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
   <!-- Latest compiled and minified JavaScript -->
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+        $(document).on('click','input[type=text]',function(){ this.select(); });
+    });
+  </script>
+
+  <style>
+   input
+   {
+      border:0;
+      border-bottom:solid 1px #fff;
+      outline:none;
+      background-color: #2854a1;
+      color: #fff;
+   }
+
+   body {
+     font-family: "Open Sans","Helvetica Neue",Arial,sans-serif;
+     font-weight: 300;
+   }
+
+  .core-content {
+    background-color: #2854a1;
+    text-align: center;
+  }
+
+  .title-question {
+    color: #61b3ea;
+    font-size: 46px;
+  }
+
+  </style>
 
   <body>
-    <h1>How to be ... ?</h1>
+    <div class="core-content">
+      <div class="container" style="padding: 120px 15px;">
+        <p class="title-question">How to be an <input type="text" size="8" value="Astronaut"></input>?</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>info graphics</p>
+    </div> 
 
   </body>
-
 </html>
