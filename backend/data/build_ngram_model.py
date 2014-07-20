@@ -17,7 +17,7 @@ GLOBAL_MARGINALS = {}
 MARGINALS = {}
 SMOOTHED_CONDITIONALS = {}
 
-DEPTHS = [ -15, -10, -5, 0, 5, 10, 15, 20 ]
+DEPTHS = [ -20, -15, -10, -5, 0, 5 ]
 
 import pickle
 import sys
@@ -331,7 +331,7 @@ def CollectNGramStats():
     ngram_pairs = {}
 
     SHARDS = 100
-    for i in range(5):
+    for i in range(20):
         f = open("data/v1.1/parsed_resumes.dat-%05d-of-%05d" % (i, SHARDS), "r")
         for j, career in enumerate(ResumeGenerator(f)):
             if j % 1000 == 0:
@@ -497,7 +497,7 @@ def ComputeConditionals(ngram_pairs):
                 w.append(weight)
                 cum += weight["weight"]
                 weight["weight"] /= total
-                if i >= 7:
+                if i >= 8:
                     break
 
             nodes[role]["time_jobs"][time] = w

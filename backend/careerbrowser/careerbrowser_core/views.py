@@ -25,9 +25,17 @@ def home(request):
 # 		return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
 # 	#http response as POST
 
+def RoleIdFromQuery(q):
+    q = q.lower()
+    if ":" in q:
+        return q
+
+    if q in PROFESSIONS:
+        return PROFESSIONS[q]
+
 @csrf_exempt
 def api_handler(request, profession):
-	print(profession)
+    profession = RoleIdFromQuery(profession)
 	if request.method == 'GET':
 		print("API CALL MADE")
 		return HttpResponse("Use POST to request API data please")
