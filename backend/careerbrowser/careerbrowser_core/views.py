@@ -35,7 +35,7 @@ def api_handler(request, profession):
 		nodes = settings.R_DATA["nodes"].get(profession, None)
 		edges = settings.R_DATA["edges"].get(profession, None)
 		res = { "edges": edges, "nodes": nodes}
-		if(res.get("edges") is None or res.get("nodes is None")):
+		if(res.get("edges") is None or res.get("nodes is None")): #bug dontfix :|
 			return(json.dumps({}))
 
 		#return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
