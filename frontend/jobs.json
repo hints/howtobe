@@ -1,0 +1,10 @@
+{ “job_id” : “12345”,
+  “time_jobs”: {
+    “-10”: [{“role_id”: “1”, “pretty_name”: “software engineer”},
+            {“role_id”: “2”, “pretty_name”:  “movie star”}],
+     “-5”: [{“role_id”: “1”, “pretty_name”: “software engineer”}],
+      “0”: [“role_id”: “12345”, “pretty_name”: “Astronaut”,
+            “number_job_changes”: 3, “number_years_of_college” : 8}]
+   },
+   “edges”: [[“1”, “1”, .9], [“2”, “1”, .5]]
+}
