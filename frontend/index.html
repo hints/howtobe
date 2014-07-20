@@ -19,8 +19,10 @@
 
     jQuery.ajax({url: "jobs.json",
        dataType: "json"}).done(function(data) {
-         console.log(data);
-         console.log(data["job_id"]);
+         var job = data.time_jobs['0'][0];
+         $('#job').text(job.pretty_name);
+         $('#years').text(job.number_years_of_college);
+         $('#switched').text(job.number_job_changes);
     }).fail(function() {
       console.log('fail');
     });
@@ -29,7 +31,7 @@
   <style>
    input
    {
-      border:0;
+      border: 0;
       border-bottom:solid 1px #fff;
       outline:none;
       background-color: #2854a1;
@@ -52,7 +54,11 @@
   }
 
   .info-graphic {
-    text-align: center;
+    padding: 40px 0px;
+    text-align: left;
+    font-size: 26px;
+    max-width: 800px;
+    margin: auto;
   }
 
   </style>
@@ -65,9 +71,8 @@
     </div>
 
     <div class='info-graphic'>
-      <div class="container">
-        <p><i>Did you know?</i> The average <span id="job"></span> has spent <span id="years"></span> years in post secondary education and has switched jobs <span id="switched"></span> times.</p>
-
+      <div class="">
+        <p><b><i>Did you know?</i></b> The average <span id="job"></span> has spent <span id="years"></span> years in post secondary education and has switched jobs <span id="switched"></span> times.</p>
       </div>
     </div> 
 
