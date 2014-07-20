@@ -21,9 +21,11 @@
         $(document).on('click','input[type=text]',function(){ this.select(); });
     });
 
-    jQuery.ajax({url: "jobs.json",
+	
+    jQuery.ajax({url: "testoutput.json",
        dataType: "json"}).done(function(data) {
-         var job = data.time_jobs['0'][0];
+		console.log(data);
+         var job = data.nodes.time_jobs['0'][0];
          $('#job').text(job.pretty_name);
          $('#years').text(job.number_years_of_college);
          $('#switched').text(job.number_job_changes);
@@ -31,7 +33,7 @@
     }).fail(function() {
       console.log('fail');
     });
-	
+
 	function drawChart(data) {
 		var diagram = new google.visualization.DataTable();
 		diagram.addColumn('string', 'From');
@@ -40,45 +42,72 @@
 
 		var edges = data.edges;
 		for (var i=0; i<edges.length; i++) {
-			
-			var role_id_to = edges[i][0];
-			var year_to = edges[i][1];
+			var year_to = edges[i][2];
+			var role_id_to = edges[i][3];
 			var node_to;
-			var table_to = data.time_jobs[year_to];
+			
+			var table_to = data.nodes.time_jobs[year_to];	
 			for (var j=0; j<table_to.length; j++) {
-				if (role_id_to == table_to[j].role_id) {
+				if (role_id_to === table_to[j].job_id) {
 					node_to = table_to[j].pretty_name;
 					break;
 				}
 			}
 
-			var role_id_from = edges[i][2];
-			var year_from = edges[i][3];
+			var year_from = edges[i][0];
+			var role_id_from = edges[i][1];
 			var node_from;
-			
-			var table_from = data.time_jobs[year_from];
+			var weight_from;
+
+			var table_from = data.nodes.time_jobs[year_from];
+
 			for (var j=0; j<table_from.length; j++) {
-				if (role_id_from == table_from[j].role_id) {
+				if (role_id_from === table_from[j].job_id) {
 					node_from = table_from[j].pretty_name;
+					weight_from = table_from[j].weight;
 					break;
 				}
 			}
-			
-			var weight = edges[i][4];
+
+			var weight = parseFloat(edges[i][4])*weight_from;
 			diagram.addRows([
-				[ node_from, node_to, parseFloat(weight) ]
+				[ node_from+"@"+year_from, node_to+"@"+year_to, parseFloat(weight) ]
 			]);
 		}
 		
+
+		
 		// Set chart options
 		var options = {
-		  width: 600,
+		  width: 1200,
+		  height: 500,
+		  enableInteractivity: true,
+		  sankey: {
+			  node: {
+				label: {
+				  fontName: 'Times-Roman',
+				  fontSize: 20,
+				  color: '#000',
+				  bold: true,
+				  italic: false
+				},
+				labelPadding: 6, // Horizontal distance between the label and the node.
+				nodePadding: 30, // Vertical distance between nodes.
+				width: 10         // Thickness of the node.
+			  }
+		  }
 		};
 
 		// Instantiate and draw our chart, passing in some options.
 		var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
 		chart.draw(diagram, options);
+		
+		google.visualization.events.addListener(chart, 'select', function(chart) {
+			
+			alert("test");
+		});
 	}
+
   </script>
 
   <style>
@@ -111,7 +140,7 @@
     text-align: left;
     font-size: 26px;
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto;
   }
 
   </style>
