@@ -26,9 +26,16 @@
     }
 
     var fading_job = 0;
-    var jobs = ["an Astronaut", "a United States Senator",
-      "an Investment Banker", "a CEO", "a Software Engineer", "a Ballet Dancer",
-      "your dream career"];
+    var jobs = ["a Medical Scientist", "a Personal Trainer", "an Author",
+      "a Firefighter", "a Model", "a Graphic Designer", "an Astronomer",
+      "a Bartender", "a Kindergarten Teacher", "a Chef", "a Firefighter",
+      "a Software Engineer", "an Artist", "an Actor", "an Economist",
+      "a Neurosurgeon", "an Aircraft Pilot", "a Reporter",
+      "an Emergency Medical Paramedic", "a Musician", "a Fashion Designer",
+      "a Professor", "a Personal Shopper", "a Game Designer", "a Mayor",
+      "a US Marines", "a Data Scientist", "a Life Guard",
+      "a Business Development", "a CEO", "an Entrepreneur",
+      "a Fashion Designer", "an Advertising Agent"];
 
     setInterval(function() {
       if ($.inArray($('#job-title').val(), jobs) < 0 && 
@@ -205,7 +212,7 @@
     <div class="core-content">
       <div class="container">
         <div class="inner-question">
-        <p class="title-question">How to be <input id="job-title" type="text" size="7" onkeyup="inputKeyUp(event)" value="an Astronaut"></input>?</p>
+        <p class="title-question">How to be <input id="job-title" type="text" size="7" onkeyup="inputKeyUp(event)" value="an Entrepreneur"></input>?</p>
         </div>
       </div>
     </div>
