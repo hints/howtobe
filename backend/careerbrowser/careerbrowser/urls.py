@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$', 'careerbrowser_core.views.home'),#careerbrowser_core.views.home'),
+    url(r'^home/$', 'careerbrowser_core.views.home2'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/([0-9:a-z]+)/', 'careerbrowser_core.views.api_handler')
 )

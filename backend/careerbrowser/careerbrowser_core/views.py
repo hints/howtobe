@@ -70,4 +70,15 @@ def RoleIdFromQuery(q):
 @csrf_exempt
 def api_handler(request, profession):
 	profession = RoleIdFromQuery(profession)
-	return HttpResponse(json.dumps({"edges":settings.R_DATA["edges"].get(profession, None) , "nodes":settings.R_DATA["nodes"].get(profession, None)}))
+	if request.method == 'GET':
+		print("API CALL MADE")
+		return HttpResponse("Use POST to request API data please")
+	elif request.method == 'POST':
+		nodes = settings.R_DATA["nodes"].get(profession, None)
+		edges = settings.R_DATA["edges"].get(profession, None)
+		res = { "edges": edges, "nodes": nodes}
+		if(res.get("edges") is None or res.get("nodes is None")): #bug dontfix :|
+			return(json.dumps({}))
+
+		#return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
+		return HttpResponse(json.dumps(res))

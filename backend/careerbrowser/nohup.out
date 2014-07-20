@@ -1,117 +1,6 @@
-[19/Jul/2014 22:34:33] "GET / HTTP/1.1" 200 1757
-[19/Jul/2014 23:35:55] "GET / HTTP/1.1" 200 1757
-[19/Jul/2014 23:35:58] "GET /admin HTTP/1.1" 301 0
-[19/Jul/2014 23:35:58] "GET /admin/ HTTP/1.1" 200 1865
-[19/Jul/2014 23:36:03] "POST /admin/ HTTP/1.1" 302 0
-[19/Jul/2014 23:36:04] "GET /admin/ HTTP/1.1" 200 2719
-Validating models...
-
-0 errors found
-July 19, 2014 - 22:34:15
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:14:30
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:14:34
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:14:38
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 00:15:29] "GET / HTTP/1.1" 404 2010
-[20/Jul/2014 00:15:44] "GET /api HTTP/1.1" 301 0
-[20/Jul/2014 00:15:44] "GET /api/ HTTP/1.1" 200 6
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:14:40
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 00:19:03] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:19:04] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:19:05] "GET /api/ HTTP/1.1" 200 6
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:18:59
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 00:19:07] "GET / HTTP/1.1" 404 2112
-[20/Jul/2014 00:19:21] "GET // HTTP/1.1" 200 6
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:19:05
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 00:20:21] "GET // HTTP/1.1" 200 6
-[20/Jul/2014 00:20:23] "GET / HTTP/1.1" 404 2111
-[20/Jul/2014 00:20:25] "GET / HTTP/1.1" 404 2111
-[20/Jul/2014 00:21:40] "GET / HTTP/1.1" 404 2111
-[20/Jul/2014 00:21:41] "GET / HTTP/1.1" 404 2111
-[20/Jul/2014 00:21:42] "GET / HTTP/1.1" 404 2111
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:20:05
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 00:21:43] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 00:21:44] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 00:21:44] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 00:21:46] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:22:04] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:22:05] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:22:06] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:22:07] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:22:07] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:22:07] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:22:11] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 00:22:12] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 00:22:15] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:22:22] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:23:19] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:24:17] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:24:19] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:24:20] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:24:21] "GET /api/ HTTP/1.1" 200 6
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:21:42
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 00:24:22] "GET / HTTP/1.1" 500 67368
-[20/Jul/2014 00:24:25] "GET / HTTP/1.1" 500 67556
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:24:21
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 00:24:38] "GET / HTTP/1.1" 500 67556
-[20/Jul/2014 00:24:38] "GET / HTTP/1.1" 500 67556
-[20/Jul/2014 00:24:38] "GET / HTTP/1.1" 500 67556
+[20/Jul/2014 09:27:54] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:27:56] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:27:56] "GET /api/job:12345/ HTTP/1.1" 500 18419605
 Traceback (most recent call last):
   File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
     self.finish_response()
@@ -124,7 +13,7 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/socket.py", line 303, in flush
     self._sock.sendall(view[write_offset:write_offset+buffer_size])
 error: [Errno 32] Broken pipe
-[20/Jul/2014 00:24:38] "GET / HTTP/1.1" 500 59
+[20/Jul/2014 09:27:56] "GET /api/job:12345/ HTTP/1.1" 500 59
 Traceback (most recent call last):
   File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
     self.finish_request(request, client_address)
@@ -141,52 +30,8 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/socket.py", line 303, in flush
     self._sock.sendall(view[write_offset:write_offset+buffer_size])
 error: [Errno 32] Broken pipe
-[20/Jul/2014 00:24:39] "GET / HTTP/1.1" 500 67556
-----------------------------------------
-Exception happened during processing of request from ('199.192.87.130', 51439)
-----------------------------------------
-[20/Jul/2014 00:24:56] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 00:24:59] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:25:02] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:25:06] "GET /admin HTTP/1.1" 301 0
-[20/Jul/2014 00:25:06] "GET /admin/ HTTP/1.1" 200 2719
-[20/Jul/2014 00:25:12] "GET /api/ HTTP/1.1" 200 6
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:24:39
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 00:25:53] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:25:55] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:25:56] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:25:57] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:25:57] "GET /api/ HTTP/1.1" 200 6
-[20/Jul/2014 00:25:59] "GET / HTTP/1.1" 200 6
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:25:47
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 00:26:57] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 00:26:59] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 00:27:01] "GET /api/ HTTP/1.1" 200 17
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:26:39
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-API CALL MADE
-[20/Jul/2014 00:28:07] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:28:09] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:28:38] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:28:54] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:28:54] "GET /api/ HTTP/1.1" 500 70401
+[20/Jul/2014 09:27:57] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:27:57] "GET /api/job:12345/ HTTP/1.1" 500 18419605
 Traceback (most recent call last):
   File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
     self.finish_response()
@@ -199,7 +44,7 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/socket.py", line 303, in flush
     self._sock.sendall(view[write_offset:write_offset+buffer_size])
 error: [Errno 32] Broken pipe
-[20/Jul/2014 00:28:54] "GET /api/ HTTP/1.1" 500 59
+[20/Jul/2014 09:27:57] "GET /api/job:12345/ HTTP/1.1" 500 59
 Traceback (most recent call last):
   File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
     self.finish_request(request, client_address)
@@ -216,89 +61,9 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/socket.py", line 303, in flush
     self._sock.sendall(view[write_offset:write_offset+buffer_size])
 error: [Errno 32] Broken pipe
-[20/Jul/2014 00:28:55] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:28:56] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:28:57] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:28:59] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:29:01] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:29:07] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:29:12] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:29:29] "GET /api/ HTTP/1.1" 500 70401
-[20/Jul/2014 00:30:29] "GET /api/ HTTP/1.1" 200 33
-[20/Jul/2014 00:32:29] "POST /api/ HTTP/1.1" 403 2282
-[20/Jul/2014 00:33:16] "POST /api/ HTTP/1.1" 403 2282
-[20/Jul/2014 00:33:37] "POST /api/ HTTP/1.1" 403 2282
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:28:01
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-----------------------------------------
-Exception happened during processing of request from ('199.192.87.130', 51499)
-----------------------------------------
-API CALL MADE
-[20/Jul/2014 00:36:51] "POST /api/ HTTP/1.1" 403 2282
-[20/Jul/2014 00:36:54] "POST /api/ HTTP/1.1" 403 2282
-[20/Jul/2014 00:36:58] "POST /api/ HTTP/1.1" 403 2282
-[20/Jul/2014 00:36:59] "POST /api/ HTTP/1.1" 403 2282
-[20/Jul/2014 00:37:01] "POST /api/ HTTP/1.1" 403 2282
-[20/Jul/2014 00:37:05] "POST /api/ HTTP/1.1" 403 2282
-[20/Jul/2014 00:38:52] "POST /api/ HTTP/1.1" 403 2282
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:36:47
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 00:39:14] "GET /api/ HTTP/1.1" 200 33
-[20/Jul/2014 00:39:16] "GET /api/ HTTP/1.1" 200 33
-[20/Jul/2014 00:39:18] "POST /api/ HTTP/1.1" 403 2282
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:39:06
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-API CALL MADE
-API CALL MADE
-[20/Jul/2014 00:41:52] "GET /api/ HTTP/1.1" 200 33
-[20/Jul/2014 00:41:59] "POST /api/ HTTP/1.1" 403 2282
-[20/Jul/2014 00:45:32] "POST /api/ HTTP/1.1" 403 2282
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:41:26
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-API CALL MADE
-[20/Jul/2014 00:54:33] "GET /api/ HTTP/1.1" 200 33
-[20/Jul/2014 00:54:34] "GET /api/ HTTP/1.1" 200 33
-[20/Jul/2014 00:54:34] "GET /api/ HTTP/1.1" 200 33
-[20/Jul/2014 00:54:34] "GET /api/ HTTP/1.1" 200 33
-[20/Jul/2014 00:54:38] "POST /api/ HTTP/1.1" 403 2282
-[20/Jul/2014 00:54:43] "GET /api/ HTTP/1.1" 200 33
-[20/Jul/2014 00:54:45] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 00:54:49] "GET /admin/ HTTP/1.1" 200 2719
-[20/Jul/2014 00:54:52] "GET /api/ HTTP/1.1" 200 33
-Validating models...
-
-0 errors found
-July 20, 2014 - 00:45:35
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-API CALL MADE
-API CALL MADE
-API CALL MADE
-API CALL MADE
-API CALL MADE
-API CALL MADE
-[20/Jul/2014 00:56:03] "GET /api/ HTTP/1.1" 500 83816
+[20/Jul/2014 09:27:58] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:27:58] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:27:58] "GET /api/job:12345/ HTTP/1.1" 500 18419605
 Traceback (most recent call last):
   File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
     self.finish_response()
@@ -311,7 +76,7 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/socket.py", line 303, in flush
     self._sock.sendall(view[write_offset:write_offset+buffer_size])
 error: [Errno 32] Broken pipe
-[20/Jul/2014 00:56:03] "GET /api/ HTTP/1.1" 500 59
+[20/Jul/2014 09:27:58] "GET /api/job:12345/ HTTP/1.1" 500 59
 Traceback (most recent call last):
   File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
     self.finish_request(request, client_address)
@@ -328,7 +93,8 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/socket.py", line 303, in flush
     self._sock.sendall(view[write_offset:write_offset+buffer_size])
 error: [Errno 32] Broken pipe
-[20/Jul/2014 00:56:03] "GET /api/ HTTP/1.1" 500 83816
+[20/Jul/2014 09:27:59] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:00] "GET /api/job:12345/ HTTP/1.1" 500 18419605
 Traceback (most recent call last):
   File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
     self.finish_response()
@@ -341,7 +107,7 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/socket.py", line 303, in flush
     self._sock.sendall(view[write_offset:write_offset+buffer_size])
 error: [Errno 32] Broken pipe
-[20/Jul/2014 00:56:03] "GET /api/ HTTP/1.1" 500 59
+[20/Jul/2014 09:28:00] "GET /api/job:12345/ HTTP/1.1" 500 59
 Traceback (most recent call last):
   File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
     self.finish_request(request, client_address)
@@ -358,8 +124,7 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/socket.py", line 303, in flush
     self._sock.sendall(view[write_offset:write_offset+buffer_size])
 error: [Errno 32] Broken pipe
-[20/Jul/2014 00:56:04] "GET /api/ HTTP/1.1" 500 83816
-[20/Jul/2014 00:56:05] "GET /api/ HTTP/1.1" 500 83816
+[20/Jul/2014 09:28:01] "GET /api/job:12345/ HTTP/1.1" 500 18419605
 Traceback (most recent call last):
   File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
     self.finish_response()
@@ -372,7 +137,7 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/socket.py", line 303, in flush
     self._sock.sendall(view[write_offset:write_offset+buffer_size])
 error: [Errno 32] Broken pipe
-[20/Jul/2014 00:56:05] "GET /api/ HTTP/1.1" 500 59
+[20/Jul/2014 09:28:01] "GET /api/job:12345/ HTTP/1.1" 500 59
 Traceback (most recent call last):
   File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
     self.finish_request(request, client_address)
@@ -389,31 +154,413 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/socket.py", line 303, in flush
     self._sock.sendall(view[write_offset:write_offset+buffer_size])
 error: [Errno 32] Broken pipe
-[20/Jul/2014 00:56:51] "POST /api/ HTTP/1.1" 200 13
+[20/Jul/2014 09:28:01] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:03] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:03] "GET /api/job:12345/ HTTP/1.1" 500 18419605
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[20/Jul/2014 09:28:03] "GET /api/job:12345/ HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[20/Jul/2014 09:28:08] "GET /api/job:12345/ HTTP/1.1" 500 18419605
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[20/Jul/2014 09:28:08] "GET /api/job:12345/ HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[20/Jul/2014 09:28:08] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:12] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:15] "GET /api/job:12345/ HTTP/1.1" 500 18419606
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[20/Jul/2014 09:28:15] "GET /api/job:12345/ HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[20/Jul/2014 09:28:15] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:20] "GET /api/job:12345/ HTTP/1.1" 500 18419606
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[20/Jul/2014 09:28:20] "GET /api/job:12345/ HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[20/Jul/2014 09:28:20] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:20] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:20] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:20] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:20] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:20] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:21] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:21] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:21] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:21] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:28:47] "GET /api/job:27/ HTTP/1.1" 200 261635
+[20/Jul/2014 09:28:54] "GET /api/job:27/ HTTP/1.1" 200 261635
+[20/Jul/2014 09:29:05] "GET /api/job:27/ HTTP/1.1" 200 261635
+[20/Jul/2014 09:29:41] "GET /api/job:12345/ HTTP/1.1" 500 18419606
+[20/Jul/2014 09:32:19] "GET /api/job:123/ HTTP/1.1" 200 14069
+[20/Jul/2014 09:32:33] "GET /api/job:123/ HTTP/1.1" 200 14069
+[20/Jul/2014 09:32:49] "POST /api/job:123/ HTTP/1.1" 200 14069
 Validating models...
 
 0 errors found
-July 20, 2014 - 00:55:58
+July 20, 2014 - 09:27:53
 Django version 1.6.5, using settings 'careerbrowser.settings'
 Starting development server at http://0.0.0.0:8001/
 Quit the server with CONTROL-C.
 ----------------------------------------
-Exception happened during processing of request from ('199.192.87.130', 51859)
+Exception happened during processing of request from ('199.192.87.130', 54189)
 ----------------------------------------
 ----------------------------------------
-Exception happened during processing of request from ('199.192.87.130', 51860)
+Exception happened during processing of request from ('199.192.87.130', 54191)
 ----------------------------------------
 ----------------------------------------
-Exception happened during processing of request from ('199.192.87.130', 51858)
+Exception happened during processing of request from ('199.192.87.130', 54194)
 ----------------------------------------
-[20/Jul/2014 05:33:31] "GET / HTTP/1.1" 500 57576
-Validating models...
-
-0 errors found
-July 20, 2014 - 05:33:23
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('199.192.87.130', 54197)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('199.192.87.130', 54198)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('199.192.87.130', 54200)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('199.192.87.130', 54204)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('199.192.87.130', 54212)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('199.192.87.130', 54214)
+----------------------------------------
+[20/Jul/2014 09:33:36] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:33:43] "GET /api/job:12345/ HTTP/1.1" 500 18419606
+[20/Jul/2014 09:33:43] "GET / HTTP/1.1" 200 4374
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[20/Jul/2014 09:33:43] "GET /api/job:12345/ HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[20/Jul/2014 09:34:11] "GET /api/job:123/ HTTP/1.1" 200 14069
+[20/Jul/2014 09:35:39] "GET /api/job:12345/ HTTP/1.1" 500 18419606
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 85, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/staticfiles/handlers.py", line 67, in __call__
+    return self.application(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 206, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 203, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 229, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 324, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 99, in render
+    return escape(output)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 203, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/html.py", line 39, in escape
+    return mark_safe(force_text(text).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace("'", '&#39;'))
+MemoryError
+[20/Jul/2014 09:35:40] "GET /api/job:12345/ HTTP/1.1" 500 59
+[20/Jul/2014 09:36:20] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:36:30] "GET /api/job:123/ HTTP/1.1" 200 14069
+[20/Jul/2014 09:36:31] "GET /api/job:12345/ HTTP/1.1" 500 18419409
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[20/Jul/2014 09:36:31] "GET /api/job:12345/ HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 85, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/staticfiles/handlers.py", line 67, in __call__
+    return self.application(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 206, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 203, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 229, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 324, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 99, in render
+    return escape(output)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 203, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/html.py", line 39, in escape
+    return mark_safe(force_text(text).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace("'", '&#39;'))
+MemoryError
+[20/Jul/2014 09:36:49] "GET /api/job:12345/ HTTP/1.1" 500 59
+[20/Jul/2014 09:36:56] "GET /api/job:123/ HTTP/1.1" 200 14069
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 85, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/staticfiles/handlers.py", line 67, in __call__
+    return self.application(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 206, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 203, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 229, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 324, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 99, in render
+    return escape(output)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 203, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/html.py", line 39, in escape
+    return mark_safe(force_text(text).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace("'", '&#39;'))
+MemoryError
+[20/Jul/2014 09:37:17] "GET /api/job:12345/ HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 85, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/staticfiles/handlers.py", line 67, in __call__
+    return self.application(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 206, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 203, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 229, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 324, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 99, in render
+    return escape(output)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 203, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/html.py", line 39, in escape
+    return mark_safe(force_text(text).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace("'", '&#39;'))
+MemoryError
+[20/Jul/2014 09:37:28] "GET /api/job:12345/ HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 85, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/staticfiles/handlers.py", line 67, in __call__
+    return self.application(        Þ‘     5       
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 206, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 203, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 229, in handle_uncaught_exception
+    return debug.technical_500_r        Þ‘     ;       ÿÿÿ
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 324, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 99, in render
+    return escape(output)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 203, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/html.py", line 39, in escape
+    return mark_safe(force_text(text).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace("'", '&#39;'))
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/safestring.py", line 116, in mark_safe
 Traceback (most recent call last):
   File "manage.py", line 10, in <module>
     execute_from_command_line(sys.argv)
@@ -421,281 +568,96 @@ Traceback (most recent call last):
     utility.execute()
   File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 392, in execute
     self.fetch_command(subcommand).run_from_argv(self.argv)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 242, in run_from_argv
-    self.execute(*args, **options.__dict__)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 279, in execute
-    saved_locale = translation.get_language()
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/__init__.py", line 154, in get_language
-    return _trans.get_language()
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/__init__.py", line 52, in __getattr__
-    if settings.USE_I18N:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 261, in fetch_command
+    commands = get_commands()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 107, in get_commands
+    apps = settings.INSTALLED_APPS
   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
     self._setup(name)
   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
     self._wrapped = Settings(settings_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 151, in __init__
-    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
-django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
-Traceback (most recent call last):
-  File "manage.py", line 10, in <module>
-    execute_from_command_line(sys.argv)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 399, in execute_from_command_line
-    utility.execute()
-  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 392, in execute
-    self.fetch_command(subcommand).run_from_argv(self.argv)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 242, in run_from_argv
-    self.execute(*args, **options.__dict__)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 279, in execute
-    saved_locale = translation.get_language()
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/__init__.py", line 154, in get_language
-    return _trans.get_language()
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/__init__.py", line 52, in __getattr__
-    if settings.USE_I18N:
-  File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 54, in __getattr__
-    self._setup(name)
-  File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 49, in _setup
-    self._wrapped = Settings(settings_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 151, in __init__
-    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
-django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
-[20/Jul/2014 05:37:52] "GET / HTTP/1.1" 500 57820
-[20/Jul/2014 05:37:54] "GET / HTTP/1.1" 500 57820
-[20/Jul/2014 05:38:12] "GET / HTTP/1.1" 500 57820
-[20/Jul/2014 05:38:14] "GET / HTTP/1.1" 500 57820
-[20/Jul/2014 05:38:15] "GET / HTTP/1.1" 500 57820
-[20/Jul/2014 05:38:15] "GET / HTTP/1.1" 500 57820
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 128, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/ubuntu/career/careerbrowser/careerbrowser/settings.py", line 14, in <module>
+    R_DATA = pickle.load(f)
+  File "/usr/lib/python2.7/pickle.py", line 1378, in load
+    return Unpickler(file).load()
+  File "/usr/lib/python2.7/pickle.py", line 857, in load
+    key = read(1)
+KeyboardInterrupt
+[20/Jul/2014 09:47:11] "GET /api HTTP/1.1" 404 2134
+Error: That port is already in use.
+[20/Jul/2014 09:53:46] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 09:53:49] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 09:53:50] "GET /api/job:12345/ HTTP/1.1" 200 30
+[20/Jul/2014 09:55:21] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 09:55:25] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 10:03:02] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 10:03:04] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 10:03:04] "GET /api/job:12345/ HTTP/1.1" 200 30
+[20/Jul/2014 10:03:24] "GET /api/job:12345/ HTTP/1.1" 200 30
+[20/Jul/2014 10:04:50] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 10:04:50] "GET /api/job:12345/ HTTP/1.1" 200 30
+[20/Jul/2014 10:05:25] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 10:05:35] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 10:05:44] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 10:05:54] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 10:05:55] "GET /api/job:12345/ HTTP/1.1" 200 30
+[20/Jul/2014 10:05:56] "GET / HTTP/1.1" 200 4374
+[20/Jul/2014 10:05:57] "GET /api/job:12345/ HTTP/1.1" 200 30
+[20/Jul/2014 10:05:59] "GET / HTTP/1.1" 200 4372
+[20/Jul/2014 10:05:59] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 10:06:01] "GET / HTTP/1.1" 200 4372
+[20/Jul/2014 10:06:02] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 10:06:11] "GET / HTTP/1.1" 200 4372
+[20/Jul/2014 10:06:12] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 10:08:28] "GET / HTTP/1.1" 200 4372
+[20/Jul/2014 10:08:30] "GET / HTTP/1.1" 200 4372
+[20/Jul/2014 10:13:16] "GET / HTTP/1.1" 200 4372
+[20/Jul/2014 10:13:17] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 10:13:50] "GET /api/job:27/ HTTP/1.1" 200 281871
+[20/Jul/2014 10:14:43] "GET /api/job:27/ HTTP/1.1" 200 281871
 Validating models...
 
 0 errors found
-July 20, 2014 - 05:37:48
+July 20, 2014 - 09:45:20
 Django version 1.6.5, using settings 'careerbrowser.settings'
 Starting development server at http://0.0.0.0:8001/
 Quit the server with CONTROL-C.
-[20/Jul/2014 05:38:21] "GET / HTTP/1.1" 200 6
+[20/Jul/2014 10:17:24] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 10:17:52] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 10:18:29] "GET / HTTP/1.1" 200 4372
+[20/Jul/2014 10:18:30] "GET /api/job:123/ HTTP/1.1" 200 14997
+[20/Jul/2014 10:18:43] "GET /api/job:123/ HTTP/1.1" 200 14997
 Validating models...
 
 0 errors found
-July 20, 2014 - 05:38:20
+July 20, 2014 - 10:17:17
 Django version 1.6.5, using settings 'careerbrowser.settings'
 Starting development server at http://0.0.0.0:8001/
 Quit the server with CONTROL-C.
-[20/Jul/2014 05:40:24] "GET / HTTP/1.1" 500 82539
-[20/Jul/2014 05:41:15] "GET / HTTP/1.1" 500 82727
-[20/Jul/2014 05:41:16] "GET / HTTP/1.1" 500 69686
-[20/Jul/2014 05:41:40] "GET / HTTP/1.1" 500 69686
-[20/Jul/2014 05:41:41] "GET / HTTP/1.1" 500 69686
-[20/Jul/2014 05:41:42] "GET / HTTP/1.1" 500 69686
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
-    self.finish_response()
-  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
-    self.write(data)
-  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
-    self._write(data)
-  File "/usr/lib/python2.7/socket.py", line 324, in write
-    self.flush()
-  File "/usr/lib/python2.7/socket.py", line 303, in flush
-    self._sock.sendall(view[write_offset:write_offset+buffer_size])
-error: [Errno 32] Broken pipe
-[20/Jul/2014 05:41:42] "GET / HTTP/1.1" 500 59
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
-    self.finish_request(request, client_address)
-  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
-    self.RequestHandlerClass(request, client_address, self)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
-    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
-  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
-    self.finish()
-  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
-    self.wfile.close()
-  File "/usr/lib/python2.7/socket.py", line 279, in close
-    self.flush()
-  File "/usr/lib/python2.7/socket.py", line 303, in flush
-    self._sock.sendall(view[write_offset:write_offset+buffer_size])
-error: [Errno 32] Broken pipe
-[20/Jul/2014 05:41:42] "GET / HTTP/1.1" 500 69686
+[20/Jul/2014 14:19:09] "GET /api/job:12345/ HTTP/1.1" 200 30
+[20/Jul/2014 14:19:13] "GET /home HTTP/1.1" 301 0
+[20/Jul/2014 14:19:13] "GET /home/ HTTP/1.1" 200 8027
+[20/Jul/2014 14:19:13] "GET /static/sankey.css HTTP/1.1" 404 1638
+[20/Jul/2014 14:19:13] "GET /static/sankey.js HTTP/1.1" 404 1635
+[20/Jul/2014 14:19:13] "GET /static/d3.v3.js HTTP/1.1" 404 1632
+[20/Jul/2014 14:27:15] "GET / HTTP/1.1" 200 4369
+[20/Jul/2014 14:54:59] "GET /home/ HTTP/1.1" 200 8256
+[20/Jul/2014 15:11:13] "GET /home/ HTTP/1.1" 200 8266
+[20/Jul/2014 15:11:15] "GET /home/?search=Astronaut HTTP/1.1" 200 8266
+[20/Jul/2014 15:11:16] "GET /home/?search=Astronaut HTTP/1.1" 200 8266
+[20/Jul/2014 15:11:18] "GET /home/?search=Astronaut HTTP/1.1" 200 8266
+[20/Jul/2014 15:31:54] "GET /home/?search=Astronaut HTTP/1.1" 200 8264
+[20/Jul/2014 15:32:02] "GET /?search=Astronaut HTTP/1.1" 200 4460
+[20/Jul/2014 15:32:03] "GET /testoutput.json HTTP/1.1" 404 2277
+[20/Jul/2014 15:33:41] "GET /?search=Astronaut HTTP/1.1" 200 4478
 Validating models...
 
 0 errors found
-July 20, 2014 - 05:40:09
+July 20, 2014 - 14:06:46
 Django version 1.6.5, using settings 'careerbrowser.settings'
 Starting development server at http://0.0.0.0:8001/
 Quit the server with CONTROL-C.
-----------------------------------------
-Exception happened during processing of request from ('208.185.137.66', 52512)
-----------------------------------------
-[20/Jul/2014 05:43:42] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 05:43:44] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 05:44:03] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 05:44:41] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 05:44:42] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 05:44:43] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 05:44:43] "GET / HTTP/1.1" 200 6
-[20/Jul/2014 05:44:44] "GET / HTTP/1.1" 200 6
-Validating models...
-
-0 errors found
-July 20, 2014 - 05:43:36
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-global!
-global!
-global!
-global!
-global!
-global!
-global!
-global!
-[20/Jul/2014 05:44:50] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:51] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:51] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:52] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:53] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:53] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:54] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:55] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:56] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:56] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:57] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:57] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:58] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:44:59] "GET / HTTP/1.1" 200 7
-[20/Jul/2014 05:45:30] "GET / HTTP/1.1" 200 7
-Validating models...
-
-0 errors found
-July 20, 2014 - 05:44:45
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 05:45:34] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:34] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:51] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:51] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:51] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:54] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:54] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:55] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:56] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:56] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:56] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:57] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:45:57] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:46:17] "GET / HTTP/1.1" 500 57986
-[20/Jul/2014 05:46:18] "GET / HTTP/1.1" 500 57986
-Validating models...
-
-0 errors found
-July 20, 2014 - 05:45:30
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 05:46:44] "GET / HTTP/1.1" 500 69826
-[20/Jul/2014 05:46:45] "GET / HTTP/1.1" 500 69826
-[20/Jul/2014 05:46:45] "GET / HTTP/1.1" 500 69826
-[20/Jul/2014 05:47:18] "GET / HTTP/1.1" 500 69826
-[20/Jul/2014 05:47:22] "GET / HTTP/1.1" 500 69826
-[20/Jul/2014 05:47:55] "GET / HTTP/1.1" 200 26
-[20/Jul/2014 05:47:56] "GET / HTTP/1.1" 200 26
-Validating models...
-
-0 errors found
-July 20, 2014 - 05:46:41
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 05:49:01] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 05:49:02] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 05:49:02] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 05:49:03] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 05:49:04] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 05:49:04] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 05:49:05] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 05:49:06] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 05:49:07] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 05:49:12] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 05:50:07] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 05:50:08] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 05:51:23] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 05:51:24] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 05:51:25] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 05:51:25] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 05:51:25] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 05:51:26] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 05:51:26] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 06:41:19] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 06:51:44] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 06:52:50] "GET / HTTP/1.1" 200 28
-[20/Jul/2014 06:58:42] "GET / HTTP/1.1" 200 28
-Validating models...
-
-0 errors found
-July 20, 2014 - 05:48:55
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 07:04:30] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 07:04:31] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 07:04:31] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 07:04:32] "GET / HTTP/1.1" 200 27
-[20/Jul/2014 07:04:33] "GET / HTTP/1.1" 200 27
-Validating models...
-
-0 errors found
-July 20, 2014 - 07:04:25
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 07:05:44] "GET / HTTP/1.1" 500 66586
-[20/Jul/2014 07:05:45] "GET / HTTP/1.1" 500 66058
-[20/Jul/2014 07:06:21] "GET / HTTP/1.1" 500 66058
-[20/Jul/2014 07:06:37] "GET / HTTP/1.1" 500 66058
-Validating models...
-
-0 errors found
-July 20, 2014 - 07:05:40
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 07:07:45] "GET / HTTP/1.1" 500 66545
-[20/Jul/2014 07:07:45] "GET / HTTP/1.1" 500 66017
-[20/Jul/2014 07:08:36] "GET / HTTP/1.1" 500 66017
-[20/Jul/2014 07:08:37] "GET / HTTP/1.1" 500 66017
-[20/Jul/2014 07:08:38] "GET / HTTP/1.1" 500 66017
-[20/Jul/2014 07:08:38] "GET / HTTP/1.1" 500 66017
-[20/Jul/2014 07:08:39] "GET / HTTP/1.1" 500 66017
-[20/Jul/2014 07:08:40] "GET / HTTP/1.1" 500 66017
-[20/Jul/2014 07:08:41] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:08:41] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:08:42] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:08:43] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:09:45] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:09:46] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:09:47] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:09:47] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:09:48] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:09:49] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:09:54] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:09:55] "GET / HTTP/1.1" 500 66018
-[20/Jul/2014 07:11:12] "GET / HTTP/1.1" 500 66018
-Validating models...
-
-0 errors found
-July 20, 2014 - 07:07:43
-Django version 1.6.5, using settings 'careerbrowser.settings'
-Starting development server at http://0.0.0.0:8001/
-Quit the server with CONTROL-C.
-[20/Jul/2014 07:12:56] "GET / HTTP/1.1" 500 66801
-[20/Jul/2014 07:12:57] "GET / HTTP/1.1" 500 66273
-[20/Jul/2014 07:14:06] "GET / HTTP/1.1" 500 66273
-[20/Jul/2014 07:14:07] "GET / HTTP/1.1" 500 66273
-[20/Jul/2014 07:14:08] "GET / HTTP/1.1" 500 66273
-[20/Jul/2014 07:14:56] "GET / HTTP/1.1" 500 66273
-[20/Jul/2014 07:14:57] "GET / HTTP/1.1" 500 66273
-[20/Jul/2014 07:18:52] "GET / HTTP/1.1" 500 58515
-[20/Jul/2014 07:19:50] "GET / HTTP/1.1" 500 58516
-[20/Jul/2014 07:20:14] "GET / HTTP/1.1" 500 57142
-[20/Jul/2014 07:20:23] "GET / HTTP/1.1" 500 57142
-[20/Jul/2014 07:39:20] "GET / HTTP/1.1" 500 58516
