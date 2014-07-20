@@ -17,11 +17,21 @@
         $(document).on('click','input[type=text]',function(){ this.select(); });
     });
 
-    jQuery.ajax({url: "https://raw.githubusercontent.com/hints/howtobe/master/frontend/jobs.json?callback=?",
-       dataType: "text",
-       success:  function(data) {
+/*
+    jQuery.getJSON("jobs.json", function(data) {
+      console.log(data);
+      console.log(data["job_id"]);
+    });
+*/
+
+    jQuery.ajax({url: "jobs.json",
+       dataType: "json"}).done(function(data) {
+         console.log(data);
          console.log(data["job_id"]);
-    }});
+    }).fail(function() {
+      console.log('fail');
+    });
+
   </script>
 
   <style>
