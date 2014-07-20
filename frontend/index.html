@@ -17,9 +17,11 @@
         $(document).on('click','input[type=text]',function(){ this.select(); });
     });
 
-    jQuery.getJSON("https://raw.githubusercontent.com/hints/howtobe/master/frontend/jobs.json?callback=?", function(data) {
-      console.log(data["job_id"]);
-    });
+    jQuery.ajax({url: "https://raw.githubusercontent.com/hints/howtobe/master/frontend/jobs.json?callback=?",
+       dataType: "text",
+       success:  function(data) {
+         console.log(data["job_id"]);
+    }});
   </script>
 
   <style>
