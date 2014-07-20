@@ -46,8 +46,8 @@ def home2(request):
 # 		#return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
 # 		return HttpResponse(json.dumps(res))
 
-@csrf_exempt
-def api_handler(request, profession):
+#@csrf_exempt
+#def api_handler(request, profession):
 	#print(profession)
 	##nodes = settings.R_DATA["nodes"].get(profession, None)
 	##edges = settings.R_DATA["edges"].get(profession, None)
@@ -57,29 +57,23 @@ def api_handler(request, profession):
 
 	#return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
 	#return HttpResponse(json.dumps(res))
-	return HttpResponse(json.dumps({"edges" : settings.R_DATA["edges"].get(profession, None), "nodes" : settings.R_DATA["nodes"].get(profession, None)}))
-=======
+#	return HttpResponse(json.dumps({"edges" : settings.R_DATA["edges"].get(profession, None), "nodes" : settings.R_DATA["nodes"].get(profession, None)}))
+
 def RoleIdFromQuery(q):
     q = q.lower()
     if ":" in q:
         return q
 
-    if q in PROFESSIONS:
-        return PROFESSIONS[q]
+    if q in settings.PROFESSIONS:
+        return settings.PROFESSIONS[q]
 
 @csrf_exempt
 def api_handler(request, profession):
-    profession = RoleIdFromQuery(profession)
-	if request.method == 'GET':
-		print("API CALL MADE")
-		return HttpResponse("Use POST to request API data please")
-	elif request.method == 'POST':
-		nodes = settings.R_DATA["nodes"].get(profession, None)
-		edges = settings.R_DATA["edges"].get(profession, None)
-		res = { "edges": edges, "nodes": nodes}
-		if(res.get("edges") is None or res.get("nodes is None")): #bug dontfix :|
-			return(json.dumps({}))
+	profession = RoleIdFromQuery(profession)
+	return HttpResponse(json.dumps({"edges":settings.R_DATA["edges"].get(profession, None) , "nodes":settings.R_DATA["nodes"].get(profession, None)}))
 
-		#return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
-		return HttpResponse(json.dumps(res))
->>>>>>> cace6ebf20d1e8b3e6bf4369fae6cd040103d0da
+
+
+
+
+	
