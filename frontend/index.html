@@ -60,9 +60,17 @@
         $('input[type="text"]').keyup(resizeInput).each(resizeInput);
     });
 	
+	function inputKeyUp(e) {
+		e.which = e.which || e.keyCode;
+		if (e.which == 13) {
+			var input = document.getElementById('job-title').value;
+			
+			getJSONData(input);
+		}
+	}
 	
 	function getJSONData(input) {
-		jQuery.ajax({url: "http://dreamjobs.me/api/developer/",
+		jQuery.ajax({url: "http://54.210.89.125/api/"+input,
 		   dataType: "json"}).done(function(data) {
 			console.log(data);
 			 var job = data.nodes.time_jobs['0'][0];
@@ -70,6 +78,7 @@
 			 $('#years').text(job.number_years_of_college);
 			 $('#switched').text(job.number_job_changes);
 			 drawChart(data);
+			 document.getElementById('note').style.display = 'block';
 		}).fail(function() {
 		  console.log('fail');
 		});
@@ -112,7 +121,7 @@
 
 			var weight = parseFloat(edges[i][4])*weight_from;
 			diagram.addRows([
-				[ node_from+"@"+year_from, node_to+"@"+year_to, parseFloat(weight) ]
+				[ node_from+String.fromCharCode(13)+"@"+year_from, node_to+String.fromCharCode(13)+"@"+year_to, parseFloat(weight) ]
 			]);
 		}
 		
@@ -196,12 +205,12 @@
     <div class="core-content">
       <div class="container">
         <div class="inner-question">
-        <p class="title-question">Dream Job: <input id="job-title" type="text" size="7" onkeyup="inputKeyUp(event)" value="an Astronaut"></input>?</p>
+        <p class="title-question">How to be <input id="job-title" type="text" size="7" onkeyup="inputKeyUp(event)" value="an Astronaut"></input>?</p>
         </div>
       </div>
     </div>
 
-    <div class='info-graphic'>
+    <div class='info-graphic' id='note' style="display:none">
       <div class="">
         <p><b><i>Did you know?</i></b> The average <span id="job"></span> has spent <span id="years"></span> years in post secondary education and has switched jobs <span id="switched"></span> times.</p>
       </div>
