@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import pickle
 
 #DONT DO THIS
-f = open("smoothed.pickle")
+f = open("/home/ubuntu/career/careerbrowser/smoothed.pickle")
 R_DATA = pickle.load(f)
 f.close()
 

@@ -11,10 +11,13 @@ import json
 def home(request):
 	if settings.GLOVAR:
 		settings.GLOCOUNT += 1
-		return render_to_response('careerbrowser/test.html')
+		return render_to_response('careerbrowser/index.html')
 		#return HttpResponse(settings.GLOVAR + str(settings.GLOCOUNT))
 	else:
 		return HttpResponse("no global")
+
+def home2(request):
+        return render_to_response('careerbrowser/test2.html')
 
 #exempting from safeguard against XSS attacks
 #DONT DO THIS
