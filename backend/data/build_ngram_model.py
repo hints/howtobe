@@ -332,7 +332,7 @@ def CollectNGramStats():
 
     SHARDS = 100
     for i in range(20):
-        f = open("data/v1.1/parsed_resumes.dat-%05d-of-%05d" % (i, SHARDS), "r")
+        f = open("howtobe/backend/data/v1.1/parsed_resumes.dat-%05d-of-%05d" % (i, SHARDS), "r")
         for j, career in enumerate(ResumeGenerator(f)):
             if j % 1000 == 0:
                 print "processing career %d." % j
@@ -415,7 +415,7 @@ def PrettyName(role_id):
         return "%s (%s)" % (Capitalize(job_name), degree_type)
 
 
-def ComputeConditionals(ngram_pairs):
+def ComputeConditionals(ngram_pairs, roleIdToSalary):
     """
     key: role_id
     value: {
@@ -440,6 +440,11 @@ def ComputeConditionals(ngram_pairs):
         if role not in nodes:
             nodes[role] = {}
             nodes[role]["time_jobs"] = {}
+            nodes[role]["salary"] = 0
+
+            roleId = int( role.split( ':' )[ 1 ] )
+            if roleId in roleIdToSalary:
+                nodes[role]["salary"] = roleIdToSalary[ roleId ]
             
         for year_pair, role_data in year_pairs.items():
             y1, y2 = year_pair
@@ -603,7 +608,6 @@ def RoleIdToAverageSalary():
 	for roleId in roleIdToSalaryList:
 	    roleIdToAverageSalary[ roleId ] = sum( roleIdToSalaryList[ roleId ] ) / float( len( roleIdToSalaryList[ roleId ] ) )
 
-        print roleIdToAverageSalary
         return roleIdToAverageSalary
 
 def LoadEdgeWeights():
@@ -614,10 +618,12 @@ def LoadEdgeWeights():
 if __name__ == '__main__':
     ngram_pairs = CollectNGramStats()
 
-    nodes, edges = ComputeConditionals(ngram_pairs)
+    roleIdToAverageSalary = RoleIdToAverageSalary()
 
-    print nodes["job:11"]
-    print edges["job:11"]
+    nodes, edges = ComputeConditionals(ngram_pairs, roleIdToAverageSalary)
+
+    print nodes
+    #print edges["job:303"]
     
     data = { "nodes": nodes, "edges": edges }
     f = open(SMOOTHED_DATA_FILENAME, "w")
