@@ -60,12 +60,12 @@ def api_handler(request, profession):
 	return HttpResponse(json.dumps({"edges" : settings.R_DATA["edges"].get(profession, None), "nodes" : settings.R_DATA["nodes"].get(profession, None)}))
 
 def RoleIdFromQuery(q):
-    q = q.lower()
-    if ":" in q:
-        return q
+	q = q.lower()
+	if ":" in q:
+		return q
 
-    if q in PROFESSIONS:
-        return PROFESSIONS[q]
+	if q in settings.PROFESSIONS:
+		return settings.PROFESSIONS[q]
 
 @csrf_exempt
 def api_handler(request, profession):
