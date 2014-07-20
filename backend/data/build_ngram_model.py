@@ -331,7 +331,7 @@ def CollectNGramStats():
     ngram_pairs = {}
 
     SHARDS = 100
-    for i in range(1):
+    for i in range(20):
         f = open("howtobe/backend/data/v1.1/parsed_resumes.dat-%05d-of-%05d" % (i, SHARDS), "r")
         for j, career in enumerate(ResumeGenerator(f)):
             if j % 1000 == 0:
