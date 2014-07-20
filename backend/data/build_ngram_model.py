@@ -134,7 +134,6 @@ def ResumeGenerator(f):
         elif mode == "### ID":
             c = Career(row)
         else:
-            print row
             sys.exit(1)
 
 
@@ -251,16 +250,6 @@ def AddStats(ngram_marginals, ngram_pairs, career):
                     
                     c += datetime.timedelta(days=365)
 
-                    
-            max_role = None
-            max_count = 0
-            for role, count in delta_metrics["roles"].items():
-                if max_count < count:
-                    max_role = role
-
-            delta_metrics["max_role"] = max_role
-
-            
             for (s2, e2, degree, major, school) in career.degrees:
                 if degree == "None":
                     continue
@@ -277,6 +266,16 @@ def AddStats(ngram_marginals, ngram_pairs, career):
                     delta_metrics["years_of_college"] += 1
                     
                     c += datetime.timedelta(days=365)
+
+            max_role = None
+            max_count = 0
+            for role, count in delta_metrics["roles"].items():
+                if max_count < count:
+                    max_role = role
+
+            delta_metrics["max_role"] = max_role
+            if d == 0:
+                delta_metrics["max_role"] = role_id
 
             delta_metrics["number_jobs"] = len(delta_metrics["roles"])
 
@@ -332,7 +331,7 @@ def CollectNGramStats():
     ngram_pairs = {}
 
     SHARDS = 100
-    for i in range(1):
+    for i in range(5):
         f = open("data/v1.1/parsed_resumes.dat-%05d-of-%05d" % (i, SHARDS), "r")
         for j, career in enumerate(ResumeGenerator(f)):
             if j % 1000 == 0:
@@ -361,7 +360,7 @@ for row in f:
     if len(a) == 0:
         continue
     try:
-        b = int(b)
+        b = str(int(b))
     except:
         continue
 
@@ -452,8 +451,6 @@ def ComputeConditionals(ngram_pairs):
 
                 if y1 not in nodes[role]["time_jobs"]:
                     nodes[role]["time_jobs"][y1] = []
-
-                print r1, PrettyName(r1)
 
                 if r1 not in nodes[role]["time_jobs"][y1]:
                     nodes[role]["time_jobs"][y1].append({
@@ -615,7 +612,7 @@ def LoadEdgeWeights():
     f.close()
 
 if __name__ == '__main__':
-    '''ngram_pairs = CollectNGramStats()
+    ngram_pairs = CollectNGramStats()
 
     nodes, edges = ComputeConditionals(ngram_pairs)
 
@@ -627,6 +624,7 @@ if __name__ == '__main__':
     pickle.dump(data, f)
     f.close()
 
-    LoadEdgeWeights()'''
+    #LoadEdgeWeights()
+    
 
-    print PrettyPrintJob( 'job:1000030'	 )
+    # print PrettyPrintJob( 'job:1000030'	 )
