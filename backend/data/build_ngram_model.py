@@ -9,6 +9,7 @@
 import copy
 import datetime
 import pickle
+import csv
 
 CONDITIONALS = {}
 GLOBAL_CONDITIONALS = {}
@@ -22,6 +23,8 @@ import pickle
 import sys
 
 SMOOTHED_DATA_FILENAME = "howtobe/backend/data/smoothed.pickle"
+SALARY_DATA_FILENAME = "howtobe/backend/data/H1B_FY2010-cleaned data1.csv"
+ROLE_DESCRIPTION_FILENAME = "howtobe/backend/data/role_descriptions.txt"
 
 def BuildNGrams():
     pass
@@ -170,6 +173,44 @@ def RoleFromDegree(degree, major):
 def RoleFromJob(id):
     assert id != "None"
     return "job:%s" % str(id)
+
+def PrettyPrintJob( jobString ):
+
+	'''
+	Expects job string in the format
+	job:0012
+	'''
+
+        roleId = int( jobString.split( ':' )[1] )
+        idToRole = {}
+
+	with open( ROLE_DESCRIPTION_FILENAME, 'rb' ) as csvfile:
+	    rolesreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+	    for row in rolesreader:
+		 if len( row[0] ) == 0 or ( len( row[0] ) > 0 and row[0][0] == '#' ):
+		     continue
+		 role = ''
+		 if len(row) > 2:
+		     for element in row[:-1]:
+		         role = role + element
+		 else:
+		     role = row[0]
+
+		 if int( row[-1] ) in idToRole:
+		     idToRole[ int( row[-1] ) ].append( role )
+		 else:
+		     idToRole[ int( row[-1] ) ] = [ role ]
+
+	if roleId not in idToRole.keys():
+	    raise Exception( "Job ID not found" )
+	
+	shortestRoleName = ''
+	for roleName in idToRole[ roleId ]:
+	    if shortestRoleName == '' or ( len( roleName ) < len( shortestRoleName ) ):
+	        shortestRoleName = roleName
+
+	return shortestRoleName
+
 
 # Note that this function gives more weight to people who change
 # jobs a lot.
@@ -490,13 +531,91 @@ def ComputeConditionals(ngram_pairs):
 
     return (nodes, edges_out)
 
+def RoleIdToAverageSalary():
+
+	roleToId = {}
+	idToRole = {}
+
+	with open( ROLE_DESCRIPTION_FILENAME, 'rb' ) as csvfile:
+	    rolesreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+	    for row in rolesreader:
+		 if len( row[0] ) == 0 or ( len( row[0] ) > 0 and row[0][0] == '#' ):
+		     continue
+		 role = ''
+		 if len(row) > 2:
+		     for element in row[:-1]:
+		         role = role + element
+		 else:
+		     role = row[0]
+
+		 if role in roleToId:
+		     roleToId[ role ].append( int( row[-1] ) )
+		 else:
+		     roleToId[ role ] = [ int( row[-1] ) ]
+
+		 if int( row[-1] ) in idToRole:
+		     idToRole[ int( row[-1] ) ].append( role )
+		 else:
+		     idToRole[ int( row[-1] ) ] = [ role ]
+
+	roles = roleToId.keys()
+
+	represented = 0
+	notRepresented = 0
+
+	rolesWithSalary = set()
+	roleIdToSalaryList = {}
+
+	with open( SALARY_DATA_FILENAME, 'rb' ) as csvfile:
+	    jobsreader = csv.reader(csvfile, delimiter=',', quotechar='"')
+	    skipFirst = True
+	    for row in jobsreader:
+		if skipFirst:
+		    skipFirst = False
+		    continue
+
+		role = row[13].lower() 
+
+		if role in roles:
+		    represented = represented + 1
+		    rolesWithSalary.add( role )
+		else:
+		    notRepresented = notRepresented + 1
+		    continue
+
+		salary = None
+		lowerSalary = float( row[14] )
+		upperSalary = None
+		if row[15] != '':
+		    upperSalary = float( row[15] )
+		if upperSalary:
+		    salary = ( lowerSalary + upperSalary ) / 2.0
+		else:
+		    salary = lowerSalary
+		
+		for roleId in roleToId[ role ]:
+		    if roleId in roleIdToSalaryList:
+		        roleIdToSalaryList[ roleId ].append( salary )
+		    else:
+		        roleIdToSalaryList[ roleId ] = [ salary ]
+
+
+
+	roleIdToAverageSalary = {}
+
+	for roleId in roleIdToSalaryList:
+	    roleIdToAverageSalary[ roleId ] = sum( roleIdToSalaryList[ roleId ] ) / float( len( roleIdToSalaryList[ roleId ] ) )
+
+        print roleIdToAverageSalary
+        return roleIdToAverageSalary
+
 def LoadEdgeWeights():
     f = open(SMOOTHED_DATA_FILENAME, "r")
     tals_data = pickle.load(f)
     f.close()
 
 if __name__ == '__main__':
-    ngram_pairs = CollectNGramStats()
+    '''ngram_pairs = CollectNGramStats()
 
     nodes, edges = ComputeConditionals(ngram_pairs)
 
@@ -508,4 +627,6 @@ if __name__ == '__main__':
     pickle.dump(data, f)
     f.close()
 
-    LoadEdgeWeights()
+    LoadEdgeWeights()'''
+
+    print PrettyPrintJob( 'job:1000030'	 )
