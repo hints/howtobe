@@ -9,6 +9,7 @@
 import copy
 import datetime
 import pickle
+import csv
 
 CONDITIONALS = {}
 GLOBAL_CONDITIONALS = {}
@@ -24,6 +25,8 @@ import sys
 TIMES = [ -20, -15, -10, -5, 0 ]
 
 SMOOTHED_DATA_FILENAME = "howtobe/backend/data/smoothed.pickle"
+SALARY_DATA_FILENAME = "howtobe/backend/data/H1B_FY2010-cleaned data1.csv"
+ROLE_DESCRIPTION_FILENAME = "howtobe/backend/data/role_descriptions.txt"
 
 def BuildNGrams():
     pass
@@ -366,6 +369,89 @@ def ComputeConditionals(ngram_pairs):
                     #print (r1, r2), conditionals[role][year_pair][(r1, r2)]
             
     return conditionals
+
+def RoleIdToAverageSalary():
+
+	roleToId = {}
+	idToRole = {}
+
+	with open( ROLE_DESCRIPTION_FILENAME, 'rb' ) as csvfile:
+	    rolesreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+	    for row in rolesreader:
+		 if len( row[0] ) == 0 or ( len( row[0] ) > 0 and row[0][0] == '#' ):
+		     continue
+		 role = ''
+		 if len(row) > 2:
+		     #print '2 ',
+		     for element in row[:-1]:
+		         role = role + element
+		     #print '2'
+		 else:
+		     #print '1 ',
+		     role = row[0]
+
+		 #print role
+		 if role in roleToId:
+		     roleToId[ role ].append( int( row[-1] ) )
+		 else:
+		     roleToId[ role ] = [ int( row[-1] ) ]
+
+		 if int( row[-1] ) in idToRole:
+		     idToRole[ int( row[-1] ) ].append( role )
+		 else:
+		     idToRole[ int( row[-1] ) ] = [ role ]
+		     #print ', '.join(row)
+
+	roles = roleToId.keys()
+
+	represented = 0
+	notRepresented = 0
+
+	rolesWithSalary = set()
+	roleIdToSalaryList = {}
+
+	with open( SALARY_DATA_FILENAME, 'rb' ) as csvfile:
+	    jobsreader = csv.reader(csvfile, delimiter=',', quotechar='"')
+	    skipFirst = True
+	    for row in jobsreader:
+		if skipFirst:
+		    skipFirst = False
+		    continue
+
+		role = row[13].lower() 
+
+		if role in roles:
+		    represented = represented + 1
+		    rolesWithSalary.add( role )
+		else:
+		    notRepresented = notRepresented + 1
+		    continue
+
+		salary = None
+		lowerSalary = float( row[14] )
+		upperSalary = None
+		if row[15] != '':
+		    upperSalary = float( row[15] )
+		if upperSalary:
+		    salary = ( lowerSalary + upperSalary ) / 2.0
+		else:
+		    salary = lowerSalary
+		
+		for roleId in roleToId[ role ]:
+		    if roleId in roleIdToSalaryList:
+		        roleIdToSalaryList[ roleId ].append( salary )
+		    else:
+		        roleIdToSalaryList[ roleId ] = [ salary ]
+
+
+
+	roleIdToAverageSalary = {}
+
+	for roleId in roleIdToSalaryList:
+	    roleIdToAverageSalary[ roleId ] = sum( roleIdToSalaryList[ roleId ] ) / float( len( roleIdToSalaryList[ roleId ] ) )
+
+        print roleIdToAverageSalary
+        return roleIdToAverageSalary
 
 def LoadEdgeWeights():
     f = open(SMOOTHED_DATA_FILENAME, "r")
