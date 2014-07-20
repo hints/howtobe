@@ -7,9 +7,17 @@ https://docs.djangoproject.com/en/1.6/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
+import pickle
+
+#DONT DO THIS
+f = open("smoothed.pickle")
+R_DATA = pickle.load(f)
+f.close()
+
+
 
 #using globals in settings file
-#DONT DO THIS
+#DONT DO THIS EITHER
 GLOVAR = "this is a terrible global!"
 GLOCOUNT = 1
 
