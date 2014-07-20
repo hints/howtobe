@@ -17,47 +17,8 @@
 </script>
   
   <script type="text/javascript">
-    function resizeInput() {
-      if ($(this).val().length <= 6) {
-        $(this).attr('size', 5);
-      } else {
-        $(this).attr('size', $(this).val().length - 1);
-      }
-    }
-
-    var fading_job = 0;
-    var jobs = ["an Astronaut", "a United States Senator",
-      "an Investment Banker", "a CEO", "a Software Engineer", "a Ballet Dancer",
-      "your dream career"];
-
-    setInterval(function() {
-      if ($.inArray($('#job-title').val(), jobs) < 0 && 
-          !$("#job-title option:selected").length) {
-        return; 
-      }
-
-/*
-      if (fading_job < 0) {
-        return;
-      }
-*/
-
-      fading_job += 1;
-      var job = jobs[fading_job % jobs.length];
-      $('#job-title').fadeOut(400, function() {
-        $('#job-title').val(job);
-        resizeInput.call($('#job-title'));
-      }).fadeIn();
- 
-    }, 2000);
-
     $(function(){
-        $(document).on('click','input[type=text]',function(){
-          this.select();
-          $(this).val('');
-          // fading_job = -1;
-         });
-        $('input[type="text"]').keyup(resizeInput).each(resizeInput);
+        $(document).on('click','input[type=text]',function(){ this.select(); });
     });
 
     jQuery.ajax({url: "jobs.json",
@@ -137,6 +98,7 @@
 
   .core-content {
     background-color: #2854a1;
+    text-align: center;
   }
 
   .title-question {
@@ -152,20 +114,12 @@
     margin: auto;
   }
 
-  .inner-question {
-    padding: 120px 15px;
-    max-width: 800px;
-    margin: auto;
-  }
-
   </style>
 
   <body>
     <div class="core-content">
-      <div class="container">
-        <div class="inner-question">
-        <p class="title-question">How to be <input id="job-title" type="text" size="7" value="an Astronaut"></input>?</p>
-        </div>
+      <div class="container" style="padding: 120px 15px;">
+        <p class="title-question">How to be an <input type="text" size="8" value="Astronaut"></input>?</p>
       </div>
     </div>
 
