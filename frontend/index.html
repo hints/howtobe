@@ -13,8 +13,17 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
   <script type="text/javascript">
+    function resizeInput() {
+      if ($(this).val().length <= 9) {
+        $(this).attr('size', 7);
+      } else {
+        $(this).attr('size', $(this).val().length - 2);
+      }
+    }
+
     $(function(){
         $(document).on('click','input[type=text]',function(){ this.select(); });
+        $('input[type="text"]').keyup(resizeInput).each(resizeInput);
     });
 
     jQuery.ajax({url: "jobs.json",
@@ -55,7 +64,7 @@
 
   .info-graphic {
     padding: 40px 0px;
-    text-align: left;
+    text-align: justify;
     font-size: 26px;
     max-width: 800px;
     margin: auto;
@@ -66,7 +75,7 @@
   <body>
     <div class="core-content">
       <div class="container" style="padding: 120px 15px;">
-        <p class="title-question">How to be an <input type="text" size="8" value="Astronaut"></input>?</p>
+        <p class="title-question">How to be an <input type="text" size="7" value="Astronaut"></input>?</p>
       </div>
     </div>
 
