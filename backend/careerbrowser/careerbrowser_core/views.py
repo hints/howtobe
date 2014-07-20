@@ -58,7 +58,7 @@ def api_handler(request, profession):
 	#return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
 	#return HttpResponse(json.dumps(res))
 	return HttpResponse(json.dumps({"edges" : settings.R_DATA["edges"].get(profession, None), "nodes" : settings.R_DATA["nodes"].get(profession, None)}))
-=======
+
 def RoleIdFromQuery(q):
     q = q.lower()
     if ":" in q:
@@ -82,4 +82,3 @@ def api_handler(request, profession):
 
 		#return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
 		return HttpResponse(json.dumps(res))
->>>>>>> cace6ebf20d1e8b3e6bf4369fae6cd040103d0da
