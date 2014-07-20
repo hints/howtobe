@@ -36,6 +36,12 @@
         return; 
       }
 
+/*
+      if (fading_job < 0) {
+        return;
+      }
+*/
+
       fading_job += 1;
       var job = jobs[fading_job % jobs.length];
       $('#job-title').fadeOut(400, function() {
@@ -53,14 +59,15 @@
          });
         $('input[type="text"]').keyup(resizeInput).each(resizeInput);
     });
-    jQuery.ajax({url: "http://54.210.89.125/api/job:22/",
+	
+    jQuery.ajax({url: "testoutput.json",
        dataType: "json"}).done(function(data) {
 		console.log(data);
          var job = data.nodes.time_jobs['0'][0];
          $('#job').text(job.pretty_name);
          $('#years').text(job.number_years_of_college);
          $('#switched').text(job.number_job_changes);
-         drawChart(data.nodes);
+		 drawChart(data);
     }).fail(function() {
       console.log('fail');
     });
