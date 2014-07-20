@@ -22,7 +22,7 @@
     });
 
 	
-    jQuery.ajax({url: "testoutput.json",
+    jQuery.ajax({url: "http://54.210.89.125/api/job:22/",
        dataType: "json"}).done(function(data) {
 		console.log(data);
          var job = data.nodes.time_jobs['0'][0];
