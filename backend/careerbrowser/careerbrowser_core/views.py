@@ -69,7 +69,7 @@ def RoleIdFromQuery(q):
 
 @csrf_exempt
 def api_handler(request, profession):
-    profession = RoleIdFromQuery(profession)
+	profession = RoleIdFromQuery(profession)
 	if request.method == 'GET':
 		print("API CALL MADE")
 		return HttpResponse("Use POST to request API data please")
