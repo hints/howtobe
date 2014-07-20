@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.template import RequestContext
+from django.template import RequestContext, Context, loader
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
+from django.shortcuts import render_to_response
 import json
 
 # Create your views here.
@@ -10,7 +11,8 @@ import json
 def home(request):
 	if settings.GLOVAR:
 		settings.GLOCOUNT += 1
-		return HttpResponse(settings.GLOVAR + str(settings.GLOCOUNT))
+		return render_to_response('careerbrowser/test.html')
+		#return HttpResponse(settings.GLOVAR + str(settings.GLOCOUNT))
 	else:
 		return HttpResponse("no global")
 
@@ -25,18 +27,31 @@ def home(request):
 # 		return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
 # 	#http response as POST
 
+# @csrf_exempt
+# def api_handler(request, profession):
+# 	print(profession)
+# 	if request.method == 'GET':
+# 		print("API CALL MADE")
+# 		return HttpResponse("Use POST to request API data please")
+# 	elif request.method == 'POST':
+# 		nodes = settings.R_DATA["nodes"].get(profession, None)
+# 		edges = settings.R_DATA["edges"].get(profession, None)
+# 		res = { "edges": edges, "nodes": nodes}
+# 		if(res.get("edges") is None or res.get("nodes is None")): #bug dontfix :|
+# 			return(json.dumps({}))
+
+# 		#return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
+# 		return HttpResponse(json.dumps(res))
+
 @csrf_exempt
 def api_handler(request, profession):
-	print(profession)
-	if request.method == 'GET':
-		print("API CALL MADE")
-		return HttpResponse("Use POST to request API data please")
-	elif request.method == 'POST':
-		nodes = settings.R_DATA["nodes"].get(profession, None)
-		edges = settings.R_DATA["edges"].get(profession, None)
-		res = { "edges": edges, "nodes": nodes}
-		if(res.get("edges") is None or res.get("nodes is None")): #bug dontfix :|
-			return(json.dumps({}))
+	#print(profession)
+	##nodes = settings.R_DATA["nodes"].get(profession, None)
+	##edges = settings.R_DATA["edges"].get(profession, None)
+	##res = { "edges": edges, "nodes": nodes}
+	##if(res.get("edges") is None or res.get("nodes") is None):
+	##	return(json.dumps({}))
 
-		#return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
-		return HttpResponse(json.dumps(res))
+	#return HttpResponse("API CALL MADE!\n")#, context_instance=RequestContext(request))
+	#return HttpResponse(json.dumps(res))
+	return HttpResponse(json.dumps({"edges" : settings.R_DATA["edges"].get(profession, None), "nodes" : settings.R_DATA["nodes"].get(profession, None)}))
