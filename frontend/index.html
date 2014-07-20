@@ -17,13 +17,6 @@
         $(document).on('click','input[type=text]',function(){ this.select(); });
     });
 
-/*
-    jQuery.getJSON("jobs.json", function(data) {
-      console.log(data);
-      console.log(data["job_id"]);
-    });
-*/
-
     jQuery.ajax({url: "jobs.json",
        dataType: "json"}).done(function(data) {
          console.log(data);
@@ -31,7 +24,6 @@
     }).fail(function() {
       console.log('fail');
     });
-
   </script>
 
   <style>
@@ -59,6 +51,10 @@
     font-size: 46px;
   }
 
+  .info-graphic {
+    text-align: center;
+  }
+
   </style>
 
   <body>
@@ -68,8 +64,11 @@
       </div>
     </div>
 
-    <div class="container">
-      <p>info graphics</p>
+    <div class='info-graphic'>
+      <div class="container">
+        <p><i>Did you know?</i> The average <span id="job"></span> has spent <span id="years"></span> years in post secondary education and has switched jobs <span id="switched"></span> times.</p>
+
+      </div>
     </div> 
 
   </body>
