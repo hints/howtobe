@@ -17,12 +17,10 @@ GLOBAL_MARGINALS = {}
 MARGINALS = {}
 SMOOTHED_CONDITIONALS = {}
 
-DEPTHS = [ -20, -15, -10, -5, 0 ]
+DEPTHS = [ -20, -15, -10, -5, 0, 5 ]
 
 import pickle
 import sys
-
-TIMES = [ -20, -15, -10, -5, 0 ]
 
 SMOOTHED_DATA_FILENAME = "howtobe/backend/data/smoothed.pickle"
 SALARY_DATA_FILENAME = "howtobe/backend/data/H1B_FY2010-cleaned data1.csv"
@@ -136,7 +134,6 @@ def ResumeGenerator(f):
         elif mode == "### ID":
             c = Career(row)
         else:
-            print row
             sys.exit(1)
 
 
@@ -227,7 +224,6 @@ def AddStats(ngram_marginals, ngram_pairs, career):
             continue
         role_id = RoleFromJob(id)
 
-
         last_delta_metrics = None
 
         for i, d in enumerate(DEPTHS):
@@ -254,16 +250,6 @@ def AddStats(ngram_marginals, ngram_pairs, career):
                     
                     c += datetime.timedelta(days=365)
 
-                    
-            max_role = None
-            max_count = 0
-            for role, count in delta_metrics["roles"].items():
-                if max_count < count:
-                    max_role = role
-
-            delta_metrics["max_role"] = max_role
-
-            
             for (s2, e2, degree, major, school) in career.degrees:
                 if degree == "None":
                     continue
@@ -280,6 +266,16 @@ def AddStats(ngram_marginals, ngram_pairs, career):
                     delta_metrics["years_of_college"] += 1
                     
                     c += datetime.timedelta(days=365)
+
+            max_role = None
+            max_count = 0
+            for role, count in delta_metrics["roles"].items():
+                if max_count < count:
+                    max_role = role
+
+            delta_metrics["max_role"] = max_role
+            if d == 0:
+                delta_metrics["max_role"] = role_id
 
             delta_metrics["number_jobs"] = len(delta_metrics["roles"])
 
@@ -304,7 +300,7 @@ def AddStats(ngram_marginals, ngram_pairs, career):
                 ngram_pairs[role_id][delta_pair][pair] = AddDeltaMetrics(
                     last_delta_metrics,
                     ngram_pairs[role_id][delta_pair][pair])
-                
+
             last_delta_metrics = delta_metrics
 
 
@@ -335,13 +331,11 @@ def CollectNGramStats():
     ngram_pairs = {}
 
     SHARDS = 100
-    for i in range(1):
+    for i in range(20):
         f = open("data/v1.1/parsed_resumes.dat-%05d-of-%05d" % (i, SHARDS), "r")
         for j, career in enumerate(ResumeGenerator(f)):
-            if j % 100 == 0:
+            if j % 1000 == 0:
                 print "processing career %d." % j
-            if j > 100000:
-                break
             AddStats(ngram_marginals, ngram_pairs, career)
 
         f.close()
@@ -355,6 +349,71 @@ def CollectNGramStats():
         for v, vv in value.items():
             print vv
     """
+
+f = open("howtobe/backend/data/role_descriptions.txt", "r")
+ROLE_DESCRIPTIONS = {}
+for row in f:
+    parts = row.split(",")
+    if len(parts) < 2:
+        continue
+    a, b = parts[:2]
+    if len(a) == 0:
+        continue
+    try:
+        b = str(int(b))
+    except:
+        continue
+
+    ROLE_DESCRIPTIONS[b] = a
+    
+f.close()
+
+f = open("howtobe/backend/data/majors.txt", "r")
+MAJORS = {}
+for row in f:
+    parts = row.split(",")
+    if len(parts) < 3:
+        continue
+    major, id = parts[:2]
+    if len(major) == 0:
+        continue
+    try:
+        b = str(int(b))
+    except:
+        print "found bad row: %s " % str(parts)
+        continue
+
+    MAJORS[b] = a
+    
+f.close()
+
+
+def PrettyName(role_id):
+    def Capitalize(s):
+        terms = []
+        for term in s.split(" "):
+            if term not in [ "of", "a", "and", "for", "the", "with", "or" ]:
+                term = term.capitalize()
+            terms.append(term)
+        return " ".join(terms)
+
+    parts = role_id.split(":")
+    if parts[0] == "job":
+        job_id = parts[1]
+        job_name = ROLE_DESCRIPTIONS.get(job_id, None)
+        if job_name == None:
+            return None
+
+        return Capitalize(job_name)
+
+    elif parts[0] == "degree":
+        degree_type = parts[1].upper()
+        major = MAJORS.get(parts[1], None)
+        if major == None:
+            return None
+
+        return "%s (%s)" % (Capitalize(job_name), degree_type)
+
 
 def ComputeConditionals(ngram_pairs):
     """
@@ -371,42 +430,103 @@ def ComputeConditionals(ngram_pairs):
       }
     }
     """
-    conditionals = {}
+    nodes = {}
+    edges = {}
 
     for role, year_pairs in ngram_pairs.items():
-        if role not in conditionals:
-            conditionals[role] = {}
+        if role not in edges:
+            edges[role] = {}
 
+        if role not in nodes:
+            nodes[role] = {}
+            nodes[role]["time_jobs"] = {}
+            
         for year_pair, role_data in year_pairs.items():
+            y1, y2 = year_pair
             roles = {}
 
             for (r1, r2), count in role_data.items():
-                if r1 == "None" or r2 == "None":
+                if r1 == "None" or r2 == "None" or r1 is None or r2 is None:
                     continue
 
+                if y1 not in nodes[role]["time_jobs"]:
+                    nodes[role]["time_jobs"][y1] = []
+
+                if r1 not in nodes[role]["time_jobs"][y1]:
+                    nodes[role]["time_jobs"][y1].append({
+                        "job_id": r1,
+                        "weight": count["count"],
+                        # TODO(gerrish): fix.
+                        "pretty_name": PrettyName(r1),
+                        "cluster_id": 0,
+                        "number_job_changes": max(count["number_jobs"] - 1, 0) / count["count"],
+                        "number_years_of_college": count["number_years_of_college"],
+                        })
+                
                 if r1 not in roles:
                     roles[r1] = count
                 else:
                     roles[r1] = AddDeltaMetrics(roles[r1], count)
 
-            if year_pair not in conditionals:
-                conditionals[role][year_pair] = {}
+            if year_pair not in edges:
+                edges[role][year_pair] = {}
 
             for (r1, r2), count in role_data.items():
                 if r1 == "None" or r2 == "None" or r1 == None or r2 == None:
                     continue
                 
-                if (r1, r2) not in conditionals[role][year_pair]:
+                if (r1, r2) not in edges[role][year_pair]:
                     c = count["count"]
-                    conditionals[role][year_pair][(r1, r2)] = {
+                    edges[role][year_pair][(r1, r2)] = {
                         "weight": float(c / (roles[r1]["count"] + 0.01)),
                         "number_years_of_college": float(count["number_years_of_college"] / c),
                         "number_jobs": float(count["number_jobs"] / c),                        
                         }
 
-                    #print (r1, r2), conditionals[role][year_pair][(r1, r2)]
-            
-    return conditionals
+    for role in nodes:
+        for time in nodes[role]["time_jobs"]:
+            weights = nodes[role]["time_jobs"][time]
+            w = []
+            total = 0.0
+            for i, weight in enumerate(weights):
+                total += weight["weight"]
+
+            cum = 0.0
+            weights.sort(key=lambda x: x["weight"], reverse=True)
+            for i, weight in enumerate(weights):
+                w.append(weight)
+                cum += weight["weight"]
+                weight["weight"] /= total
+                if i >= 8:
+                    break
+
+            nodes[role]["time_jobs"][time] = w
+
+    edges_out = {}
+    for role in edges:
+        edges_out[role] = []
+        for (y1, y2) in edges[role]:
+            for (r1, r2) in edges[role][(y1, y2)]:
+                match = 0
+                if y2 not in nodes[role]["time_jobs"]:
+                    continue
+
+                for node in nodes[role]["time_jobs"][y1]:
+                    if node["job_id"] == r1:
+                        match += 1
+                        break
+
+                for node in nodes[role]["time_jobs"][y2]:
+                    if node["job_id"] == r2:
+                        match += 1
+                        break
+
+                if match < 2:
+                    continue
+
+                edges_out[role].append((y1, r1, y2, r2, edges[role][(y1, y2)][(r1, r2)]["weight"]))
+
+    return (nodes, edges_out)
 
 def RoleIdToAverageSalary():
 
@@ -491,17 +611,20 @@ def LoadEdgeWeights():
     tals_data = pickle.load(f)
     f.close()
 
-    print tals_data.keys()
-
 if __name__ == '__main__':
-    '''ngram_pairs = CollectNGramStats()
+    ngram_pairs = CollectNGramStats()
 
-    conditionals = ComputeConditionals(ngram_pairs)
+    nodes, edges = ComputeConditionals(ngram_pairs)
 
+    print nodes["job:11"]
+    print edges["job:11"]
+    
+    data = { "nodes": nodes, "edges": edges }
     f = open(SMOOTHED_DATA_FILENAME, "w")
-    pickle.dump(conditionals, f)
+    pickle.dump(data, f)
     f.close()
 
-    LoadEdgeWeights()'''
+    #LoadEdgeWeights()
+    
 
-    print PrettyPrintJob( 'job:1000030'	 )
+    # print PrettyPrintJob( 'job:1000030'	 )

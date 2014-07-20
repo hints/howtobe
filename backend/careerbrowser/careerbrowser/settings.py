@@ -14,7 +14,17 @@ f = open("/home/ubuntu/career/careerbrowser/smoothed.pickle")
 R_DATA = pickle.load(f)
 f.close()
 
-
+PROFESSIONS = {}
+f = open("/home/ubuntu/career/role_descriptions.txt", "r")
+for row in f:
+    row = row.strip()
+    parts = row.split(",")
+    if len(parts) != 2:
+        continue
+    if len(parts[0]) == 0:
+        continue
+    PROFESSIONS[parts[0]] = "job:%s" % parts[1]
+f.close()
 
 #using globals in settings file
 #DONT DO THIS EITHER
