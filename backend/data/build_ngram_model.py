@@ -331,7 +331,7 @@ def CollectNGramStats():
     ngram_pairs = {}
 
     SHARDS = 100
-    for i in range(20):
+    for i in range(1):
         f = open("howtobe/backend/data/v1.1/parsed_resumes.dat-%05d-of-%05d" % (i, SHARDS), "r")
         for j, career in enumerate(ResumeGenerator(f)):
             if j % 1000 == 0:
@@ -444,7 +444,7 @@ def ComputeConditionals(ngram_pairs, roleIdToSalary):
 
             roleId = int( role.split( ':' )[ 1 ] )
             if roleId in roleIdToSalary:
-                nodes[role]["salary"] = roleIdToSalary[ roleId ]
+                nodes[role]["salary"] = int( round( roleIdToSalary[ roleId ] ) )
             
         for year_pair, role_data in year_pairs.items():
             y1, y2 = year_pair
@@ -622,8 +622,8 @@ if __name__ == '__main__':
 
     nodes, edges = ComputeConditionals(ngram_pairs, roleIdToAverageSalary)
 
-    print nodes
-    #print edges["job:303"]
+    print nodes["job:2300"]
+    #print edges["job:2300"]
     
     data = { "nodes": nodes, "edges": edges }
     f = open(SMOOTHED_DATA_FILENAME, "w")
